@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .question {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin-bottom: 8px;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 4px;
+            padding-left: 10px;
+            transition: background-color 0.2s;
+        }
+        .option:hover {
+            background-color: #f1f8fe;
+        }
+        .option input {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+        .option label {
+            cursor: pointer;
+            width: 100%;
+            padding: 5px 0;
+        }
+        .submit-btn {
+            display: block;
+            width: 150px;
+            margin: 40px auto 0;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questions</h1>
+    
+    <form id="quizForm">
+        <div class="question">
+            <div class="question-text">1) What is the capital of France?</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q1" value="A">
+                    <span>A) Paris</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="B">
+                    <span>B) London</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="C">
+                    <span>C) Berlin</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="D">
+                    <span>D) Madrid</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="question-text">2) Which planet is known as the Red Planet?</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q2" value="A">
+                    <span>A) Venus</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="B">
+                    <span>B) Mars</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="C">
+                    <span>C) Jupiter</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="D">
+                    <span>D) Saturn</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <div class="question-text">3) What is 2 + 2?</div>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q3" value="A">
+                    <span>A) 3</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="B">
+                    <span>B) 4</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="C">
+                    <span>C) 5</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="D">
+                    <span>D) 6</span>
+                </label>
+            </div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Quiz submitted!');
+        });
+    </script>
+</body>
+</html>
